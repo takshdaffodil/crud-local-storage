@@ -17,7 +17,7 @@ const COMPANY_NAME_REQUIRED = "Please enter company name";
 const ADDRESS_REQUIRED = "Please enter address";
 const EMAIL_REQUIRED = "Please enter email";
 const PHONE_REQUIRED = "Please enter phone";
-const PHONE_LENGHTH = "Phone number must be atleast 10 digits";
+const PHONE_LENGHTH = "Phone number must be of 10 digits";
 const PHONE_NEGATIVE = "Phone number cannot be a negative";
 const INFO_REQUIRED = "Please enter info";
 
@@ -134,10 +134,10 @@ function showLocalStorageData() {
 function phoneNumberValid(input, message) {
   if (input.value.trim() === "") {
     return showError(input, PHONE_REQUIRED);
-  } else if (input.value.length < 10) {
-    return showError(input, message);
   } else if (input.value <= 0) {
     return showError(input, PHONE_NEGATIVE);
+  } else if (input.value.length == 10) {
+    return showError(input, message);
   }
   return showSuccess(input);
 }
