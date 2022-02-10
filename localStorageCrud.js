@@ -211,6 +211,7 @@ function updateUser(id) {
   phone.value = userToUpdate.phone;
   additionalInfo.value = userToUpdate.additionalInfo;
 
+  document.body.scrollTop = document.documentElement.scrollTop = 0;
   update = true;
   creationDate = userToUpdate.date;
   document.getElementById("submit").textContent = "Update User";
