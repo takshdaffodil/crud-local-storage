@@ -136,7 +136,7 @@ function phoneNumberValid(input, message) {
     return showError(input, PHONE_REQUIRED);
   } else if (input.value <= 0) {
     return showError(input, PHONE_NEGATIVE);
-  } else if (input.value.length == 10) {
+  } else if (input.value.length !== 10) {
     return showError(input, message);
   }
   return showSuccess(input);
